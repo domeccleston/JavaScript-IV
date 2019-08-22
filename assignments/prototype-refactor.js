@@ -89,3 +89,29 @@ class Person {
   var tom = new Baby('Tom', 1,);
   
   console.log(tom.greet());
+
+  // TASK 4
+
+  class Kitchen { 
+    constuctor(name) {
+      this.name = name;
+      this.availableIngredients = [];
+      this.isBaked = false;
+      this.isBurned = false;
+    }
+    bake(...ingredients) {
+      this.availableIngredients.push(...ingredients);
+      return this.availableIngredients;
+    }
+    removeFromOven(dish) {
+      if (!this.isBaked) {
+        return `you remove your dish from the oven. It is undercooked and inedible. Try again!`;
+      }
+      if (this.isBaked && !this.isBurned) {
+        return `you retrieve your delicious ${this.name} from the oven.`;
+      }
+      if (this.isBaked && this.isBurned) {
+        return `you remove your dish from the oven. It is burned to a crisp. What a disaster!`;
+      }
+    }
+  }
