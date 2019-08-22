@@ -47,3 +47,22 @@ class Student extends Person {
 }
 
 let dom = new Student("Dom", 23, "Sheffield", "Student", "WEBEU3", ["React", "Node", "CS"]);
+
+class ProjectManager extends Instructor {
+	constructor(name, age, location, gradClassName, favInstructor) {
+		super(name, age, location);
+		this.gradClassName = gradClassName;
+		this.favInstructor = favInstructor;
+	}
+	standUp(channel) {
+		return `${this.name} announces to ${channel}: @channel standup time!`;
+	}
+	debugsCode(student, subject) {
+		return `${this.name} debugs ${student.name}' code on ${subject}`;
+	}
+}
+
+
+let tobi = new ProjectManager("Tobi", 23, "Nigeria", "WEBEU22", "Gabe")
+
+tobi.debugsCode({name: "Martins"}, "CS");

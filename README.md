@@ -110,6 +110,7 @@ const fred = new Instructor({
   * `standUp` a method that takes in a slack channel and logs `{name} announces to {channel}, @channel standy times!​​​​​
   * `debugsCode` a method that takes in a student object and a subject and logs out `{name} debugs {student.name}'s code on {subject}`
 
+
 #### Stretch Problem
 
 * Extend the functionality of the Student by adding a prop called grade and setting it equal to a number between 1-100.
